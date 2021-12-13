@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--- Thymeleaf dependency--->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!--- Bootstrap Dependency --->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <!--- Name of tab --->
+    <title>Home Page</title>
+</head>
+
+<body>
+
+<!--- Header--->
+<div style="display: flex; justify-content: center">
+    <h1>Home Page</h1>
+</div>
+
+<div style="display: flex; justify-content: center">
+    <h3>Click A Button Below!</h3>
+</div>
+
+<div style="display: flex; justify-content: center">
+
+<!--- Button that goes to showAllResults page --->
+    <form th:attr="action=@{/showAllResultsOfPerson}">
+        <button type="submit"class="btn btn-info btn-lg" style="margin:10px;">Show All Results</button>
+    </form>
+
+
+    <!--- Button that goes to searchById page --->
+    <form th:attr="action=@{/searchById}">
+        <button type="submit"class="btn btn-secondary btn-lg" style="margin:10px;">Search By Id</button>
+    </form>
+
+    <!--- Button that goes to addPerson page --->
+    <form th:attr="action=@{/addPerson}">
+        <button type="submit"class="btn btn-success btn-lg" style="margin:10px;">Add Person</button>
+    </form>
+
+
+    <!--- Button that goes to updatePerson page --->
+    <form th:attr="action=@{/updatePerson}">
+        <button type="submit"class="btn btn-warning btn-lg" style="margin:10px;">Update Person</button>
+    </form>
+
+    <!--- Button that goes to deletePerson page --->
+    <form th:attr="action=@{/deletePerson}">
+        <button type="submit"class="btn btn-danger btn-lg" style="margin:10px;">Delete Person</button>
+    </form>
+</div>
+
+</body>
+
+</html>
